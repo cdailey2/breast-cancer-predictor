@@ -1,0 +1,226 @@
+@media (max-width: 500px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #B8C4CB;
+        font-family: 'Gill Sans';
+    }
+
+    #model-selector-component {
+        /* background-color: red; */
+        height:100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-container {
+        background-color: #859EAF;
+        height:15vh;
+    }
+
+    #model-selector-caption {
+        font-size: 5vh;
+        text-align: center;
+    }
+
+    #model-options-container {
+        height: 75%;
+        /* display: flex; */
+    }
+
+    #form-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: yellow; */
+        justify-content: space-evenly;
+
+    }
+
+    .model-option {
+        background-color: #D49AA0;
+        width: 80vw;
+        height: 32vh;
+
+        border-radius: 20px;
+    }
+
+    .model-option-header-div {
+        background-color: #B7858A;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        height: 8vh;
+        margin-top: 0px;
+        display:flex;
+        justify-content: center;  
+    }
+
+    .model-option-header {
+        font-size: 3vh;
+    }
+
+    img {
+        display: none;
+    }
+
+    .model-description {
+        font-size: 2vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+
+    #submit-button-container {
+        height:12vh;
+        width: 100%;
+        margin-top: 5%;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #submit-button {
+        height: 50%;
+        width: 30%;
+        background-color: #859EAF;
+        border: none;
+    
+        font-size: 3.5vh;
+        font-weight:bolder;
+    
+        border-radius: 20px;
+    }
+    
+    #submit-button:hover {
+        /* FIXME */
+        height:55%;
+        width:42%;
+    }
+}
+
+@media(min-width: 501px) {
+    body {
+        display: flex;
+        justify-content: center;
+        font-family: 'Gill Sans';
+        background-color: #596A76;
+    }
+
+    #model-selector-component {
+        height: 90vh;
+        width: 70vw;
+        border-radius:20px;
+        background-color: #B8C4CB;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-container {
+        background-color: #859EAF;
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        height: 12vh;
+
+        text-align: center;
+    }
+
+    #model-selector-caption {
+        font-size: 3.8vh;
+    }
+
+    #model-options-container {
+        height: 60vh;
+
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    #form-container {
+        display: flex;
+        justify-content: space-evenly;
+        /* background-color: yellow; */
+
+        height: 100%;
+    }
+
+    .model-option {
+        height: 55vh;
+        width: 40%;
+        background-color: #D49AA0;
+
+        border-radius: 20px;
+
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    
+    .model-option-header-div {
+        background-color: #B7858A;
+        height: 9vh;
+
+        margin-top: 0px;
+        display:flex;
+        justify-content: center; 
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .model-option-header {
+        font-size: 2.8vh;
+        text-align: center;
+    }
+
+    .model-description {
+        font-size: 1.5vw;
+
+        height: 65%;
+
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    #submit-button-container {
+        height:12vh;
+        width: 100%;
+        margin-top: 5%;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #submit-button {
+        height: 60%;
+        width: 30%;
+        background-color: #859EAF;
+        border: none;
+    
+        font-size: 3.5vh;
+        font-weight:bolder;
+    
+        border-radius: 20px;
+    }
+    
+    #submit-button:hover {
+        /* FIXME */
+        height:62%;
+        width:32%;
+    }
+
+    #submit-button:active {
+        color: white;
+        background-color: #596A76;
+
+        height: 60%;
+        width:30%;
+    }
+}
+
+

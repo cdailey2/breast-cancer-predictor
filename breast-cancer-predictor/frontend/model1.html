@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Malignancy Detection</title>
+    <link rel="stylesheet" href="css/model1-styles.css">
+    <script src="js/private_page.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/model_selection.js"></script>
+    <script src="js/model_processing.js"></script>
+</head>
+<body>
+    <script>
+        checkAuthenticate();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            modelToHTML();
+        });
+    </script>
+
+    <div id="left-section">
+        <div id="top-left-section">
+            <h2><span id="pink-path">PinkPath</span> <span id="predictor">Predictor</span></h2>
+            <img src="utils/bc_logo.png">
+        </div>
+        <div id="bottom-left-section">
+            <div id="data-fields-header-container">
+                <h3>Data Fields</h3>
+            </div>
+            <div id="data-fields-container">
+                <div id="data-field-labels-container">
+                    <p>Clump Thickness: </p>
+                    <p>Uniformity of Cell Size: </p>
+                    <p>Uniformity of Cell Shape: </p>
+                    <p>Marginal Adhesion: </p>
+                    <p>Single Epithelial Cell Size: </p>
+                    <p>Bare Nuclei: </p>
+                    <p>Bland Chromatin: </p>
+                    <p>Normal Nucleoli: </p>
+                    <p>Mitoses: </p>
+                </div>
+                <div id="valid-inputs-container">
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                    <p><span class="left-num">1</span> - <span class="right-num">10</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="right-section">
+        <div id="top-right-section">
+            <h1>Breast Cancer Malignancy Predictor</h1>
+            <h2>Machine Learning <span id="model-selection"></span> Model</h2>
+            <div id="form-div">
+                <h3 id="form-caption">Fill the Following Fields:</h3>
+                <form id="cancer-form" method="POST">
+                    <div id="fields">
+                        <div id="labels-div">
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Clump Thickness: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Uniformity of Cell Size: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Uniformity of Cell Shape: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Marginal Adhesion: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Single Epithelial Cell Size: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Bare Nuclei: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Bland Chromatin: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Normal Nucleoli: </label>
+                            </div>
+                            <div class="field-labels-seperator">
+                                <label class="field-label">Mitoses: </label>
+                            </div>
+                        </div>
+                        <div id="inputs-div">
+                            <div>
+                                <input class="field-input" type="number" name="clump_thickness" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="cell_size_uniformity" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="cell_shape_uniformity" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="marginal_adhesion" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="epithelial_cell_size" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="bare_nuclei" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="bland_chromatin" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="normal_nucleoli" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <input class="field-input" type="number" name="mitoses" min="1" max="10" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="button-div">
+                        <button id="predict-button" type="submit">PREDICT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="bottom-right-section">
+            <h2 id="diagnosis-header">ML Diagnosis:</h2>
+            <div id="diagnosis-div">
+                <h2 id="diagnosis"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

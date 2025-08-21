@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Selector</title>
+    <link rel="stylesheet" href="css/model-selection-styles.css">
+    <script src="js/private_page.js"></script>
+    <script src="js/ajax.js"></script>
+
+    <script src="js/model_selection.js"></script>
+</head>
+<body>
+    <script>
+        checkAuthenticate();
+    </script>
+    
+    <div id="model-selector-component">
+        <header id="header-container" class="header-formatting">
+            <h1 id="model-selector-caption">Choose a Machine Learning Model</h1>
+        </header>
+
+        <div id="model-options-container">
+            <form id="form-container"> <!-- This line changed -->
+                <label class="model-option" for="artificial-neural-network">
+                    <div class="model-option-header-div header-formatting">
+                        <h3 class="model-option-header">Artificial Neural Network</h3>
+                    </div>
+                    <p class="model-description">An Artificial Neural Network (ANN) is a machine learning 
+                        model inspired by the structure and functioning of the human brain. 
+                        It consists of layers of interconnected nodes (neurons) that process 
+                        data and learn patterns through a system of weighted connections.</p>
+                    <input id="artificial-neural-network" type="radio" name="model-type" value="artificial-neural-network">
+                    <!-- <img src="utils/artificial-neural-network.png"> -->
+                </label>
+                <label class="model-option" for="random-forest">
+                    <div class="model-option-header-div header-formatting">
+                        <h3 class="model-option-header">Random Forest</h3>
+                    </div>
+                    <p class="model-description">A Random Forest is a machine learning model used for classification 
+                        and regression tasks. It works by creating a collection 
+                        (or "forest") of decision trees, each trained on random subsets 
+                        of the data and features. The model combines the predictions of 
+                        all the trees to produce a more robust and accurate result.</p>
+                    <input id="random-forest" type="radio" name="model-type" value="random-forest">
+                    <!-- <img src="utils/random-forest.png"> -->
+                </label>
+            </form>
+        </div>
+
+        <div id="submit-button-container">
+            <button id="submit-button" type="submit" onclick="saveSelection()">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
